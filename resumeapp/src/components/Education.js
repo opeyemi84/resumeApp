@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import uniqid from "uniqid";
 
 class Education extends Component {
   constructor(props) {
@@ -11,6 +12,17 @@ class Education extends Component {
       from: "",
       to: "",
       cgpa: "",
+      education: [
+        {
+          id: uniqid(),
+          school: "",
+          degree: "",
+          majors: "",
+          from: "",
+          to: "",
+          cgpa: "",
+        },
+      ],
     };
   }
 
@@ -51,6 +63,7 @@ class Education extends Component {
   };
 
   render() {
+    const { school, degree, majors, from, to, cgpa } = this.state;
     return (
       <div>
         <div className="section-header">
@@ -60,46 +73,36 @@ class Education extends Component {
           <label>School:</label>
           <input
             type="text"
-            value={this.state.school}
+            value={school}
             onChange={this.onSchoolChange}
           ></input>
           <br></br>
           <label>Degree Obtained:</label>
           <input
             type="text"
-            value={this.state.degree}
+            value={degree}
             onChange={this.onDegreeChange}
           ></input>
           <br></br>
           <label>Majors:</label>
           <input
             type="text"
-            value={this.state.majors}
+            value={majors}
             onChange={this.onMajorsChange}
           ></input>
           <br></br>
           <label>From:</label>
-          <input
-            type="text"
-            value={this.state.from}
-            onChange={this.onFromChange}
-          ></input>
+          <input type="text" value={from} onChange={this.onFromChange}></input>
           <br></br>
           <label>To:</label>
-          <input
-            type="text"
-            value={this.state.to}
-            onChange={this.onToChange}
-          ></input>
+          <input type="text" value={to} onChange={this.onToChange}></input>
           <br></br>
           <label>CGPA:</label>
-          <input
-            type="text"
-            value={this.state.cgpa}
-            onChange={this.oncgpaChange}
-          ></input>
+          <input type="text" value={cgpa} onChange={this.oncgpaChange}></input>
           <br></br>
         </div>
+        <button>Add</button>
+        <button>Delete</button>
       </div>
     );
   }
