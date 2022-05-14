@@ -59,6 +59,15 @@ class GenInformation extends Component {
   };
 
   render() {
+    const {
+      firstName,
+      middleInitial,
+      lastName,
+      mailingAddress,
+      phoneNumber,
+      email,
+      summary,
+    } = this.state;
     return (
       <div>
         <div className="section-header">
@@ -69,50 +78,47 @@ class GenInformation extends Component {
           <label>First Name:</label>
           <input
             type="text"
-            value={this.state.firstName}
+            value={firstName}
             onChange={this.onFirstNameChange}
           ></input>
           <br></br>
           <label>Middle Initial:</label>
           <input
             type="text"
-            value={this.state.middleInitial}
+            value={middleInitial}
             onChange={this.onMiddleInitialHandler}
           ></input>
           <br></br>
           <label>Last Name:</label>
           <input
             type="text"
-            value={this.state.lastName}
+            value={lastName}
             onChange={this.onLastNameChange}
           ></input>
           <br></br>
           <label>Mailing Address:</label>
           <input
             type="text"
-            value={this.state.mailingAddress}
+            value={mailingAddress}
             onChange={this.onAddressChange}
           ></input>
           <br></br>
           <label>Phone Number:</label>
           <input
             type="text"
-            value={this.state.phoneNumber}
+            value={phoneNumber}
             onChange={this.onPhoneNumberChange}
           ></input>
           <br></br>
           <label>Email:</label>
           <input
             type="text"
-            value={this.state.email}
+            value={email}
             onChange={this.onEmailChange}
           ></input>
           <br></br>
           <label>Professional Summary:</label>
-          <textarea
-            value={this.state.summary}
-            onChange={this.onSummaryChange}
-          ></textarea>
+          <textarea value={summary} onChange={this.onSummaryChange}></textarea>
         </div>
       </div>
     );
