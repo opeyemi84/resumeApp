@@ -7,7 +7,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Resume Builder</h1>
+        <div className="main-header">
+          <h1>Resume Builder</h1>
+        </div>
+
         <GenInformation />
         <Education />
         <Experience />
