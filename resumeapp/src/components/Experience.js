@@ -44,6 +44,7 @@ class Experience extends Component {
   };
 
   render() {
+    const { company, title, from, to, role } = this.state;
     return (
       <div>
         <div className="section-header">
@@ -53,36 +54,25 @@ class Experience extends Component {
           <label>Company:</label>
           <input
             type="text"
-            value={this.state.company}
+            value={company}
             onChange={this.onCompanyChange}
           ></input>
           <br></br>
           <label>Title:</label>
           <input
             type="text"
-            value={this.state.title}
+            value={title}
             onChange={this.onTitleChange}
           ></input>
           <br></br>
           <label>From:</label>
-          <input
-            type="text"
-            value={this.state.from}
-            onChange={this.onFromChange}
-          ></input>
+          <input type="text" value={from} onChange={this.onFromChange}></input>
           <br></br>
           <label>To:</label>
-          <input
-            type="text"
-            value={this.state.to}
-            onChange={this.onToChange}
-          ></input>
+          <input type="text" value={to} onChange={this.onToChange}></input>
           <br></br>
           <label>Job Role:</label>
-          <textarea
-            value={this.state.role}
-            onChange={this.onRoleChange}
-          ></textarea>
+          <textarea value={role} onChange={this.onRoleChange}></textarea>
           <br></br>
         </div>
       </div>
